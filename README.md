@@ -3,11 +3,11 @@ Tsumugi
 
 サロゲートの扱いを、少し簡単にします。
 
-<img src="./image/sea.png" alt="Sea" style="width: 144px;"/>
-<img src="./image/sea-struct.png" alt="Sea" style="width: 320px;"/>
+<img src="./image/sea.png" alt="Sea" width="144"/>
+<img src="./image/sea-struct.png" alt="Sea" width="320"/>
 
-<img src="./image/sea-vs.png" alt="Sea VS" style="width: 144px;"/>
-<img src="./image/sea-vs-struct.png" alt="Sea VS" style="width: 320px"/>
+<img src="./image/sea-vs.png" alt="Sea VS" width="144"/>
+<img src="./image/sea-vs-struct.png" alt="Sea VS" width="320"/>
 
 How to use
 ----------
