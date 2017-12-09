@@ -43,23 +43,26 @@ Methods
 Environment
 -----------
 
-	java version "1.8.0_51"
+	java version "1.8.0_152"
 
 Build
 -----
 
 	mvn clean
-    mvn site
+	mvn site
+	mvn jar:jar
 
 Release History
 ---------------
 
++ **v0.2.0** - 2017-12-09
+   + 保守
 + **v0.1.0** - 2015-08-30
    + 最初のコミット
 
 License
 -------
-Copyright &copy; 2015 [hiro20v](https://github.com/hiro20v)  
-Distributed under the [MIT License][mit].  
+Copyright &copy; 2015-2017 [hiro20v](https://github.com/hiro20v)
+Distributed under the [MIT License][mit].
 
 [MIT]: http://opensource.org/licenses/MIT
