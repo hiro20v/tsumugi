@@ -4,7 +4,7 @@ Memo
 Release task
 ------------
 
-- [ ] pom.xml の version
+- [ ] build.gradle の version
 - [ ] README.md の Release History
-- [ ] mvn clean
-- [ ] mvn site
+- [ ] gradle clean
+- [ ] gradle build

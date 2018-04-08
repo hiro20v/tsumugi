@@ -8,7 +8,7 @@ import java.util.Objects;
  * 単一文字.<br>
  * Unicode の単一文字を表現します。<br>
  * {@link UniChar}オブジェクトは不変です。
- * 
+ *
  * @author hiro
  *
  */
@@ -18,7 +18,7 @@ public class UniChar implements Comparable<UniChar> {
 
 	/**
 	 * 指定された{@link java.lang.String}を使用して、新しい{@link UniChar}を構築します。.
-	 * 
+	 *
 	 * @param uniCharString
 	 *            {@link java.lang.String}
 	 */
@@ -36,7 +36,7 @@ public class UniChar implements Comparable<UniChar> {
 
 	/**
 	 * 指定されたUnicodeコード単位を使用して、新しい{@link UniChar}を構築します。.
-	 * 
+	 *
 	 * @param codePoint
 	 *            Unicodeコード単位
 	 */
@@ -47,7 +47,7 @@ public class UniChar implements Comparable<UniChar> {
 
 	/**
 	 * この{@link UniChar}のUnicodeコード単位を取得します。.
-	 * 
+	 *
 	 * @return Unicodeコード単位
 	 */
 	public int getCodePoint() {
@@ -57,7 +57,7 @@ public class UniChar implements Comparable<UniChar> {
 
 	/**
 	 * この{@link UniChar}の{@link UnicodeBlock}を取得します。.
-	 * 
+	 *
 	 * @return {@link UnicodeBlock}
 	 */
 	public UnicodeBlock getUnicodeBlock() {
@@ -67,7 +67,7 @@ public class UniChar implements Comparable<UniChar> {
 
 	/**
 	 * この{@link UniChar}の{@link UnicodeScript}を取得します。.
-	 * 
+	 *
 	 * @return {@link UnicodeScript}
 	 */
 	public UnicodeScript getUnicodeScript() {
@@ -77,7 +77,7 @@ public class UniChar implements Comparable<UniChar> {
 
 	/**
 	 * 2つの{@link UniChar}オブジェクトを数値的に比較します。.<br>
-	 * 
+	 *
 	 * @param anotherUniChar
 	 *            比較対象の{@link UniChar}
 	 * @return 引数{@link UniChar}がこの{@link UniChar}と等しい場合は値0、この{@link UniChar}が
@@ -96,7 +96,7 @@ public class UniChar implements Comparable<UniChar> {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
@@ -107,7 +107,7 @@ public class UniChar implements Comparable<UniChar> {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
@@ -133,13 +133,21 @@ public class UniChar implements Comparable<UniChar> {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
 
 		return this.uniCharString;
+	}
+
+	/**
+	 * @return
+	 */
+	public String printStructure() {
+
+		return this.getInformation().toString();
 	}
 
 	Information getInformation() {

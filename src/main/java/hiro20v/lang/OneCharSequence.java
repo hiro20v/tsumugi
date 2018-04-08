@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
  * {@link OneCharSequence}オブジェクトは不変です。<br>
  * このクラスは、{@link BreakIterator#getCharacterInstance(Locale)}
  * に依存しているため、Javaのバージョンにより、結果が異なる事があります。
- * 
+ *
  * @author hiro
  *
  */
@@ -26,7 +26,7 @@ public class OneCharSequence implements Comparable<OneCharSequence> {
 
 	/**
 	 * 指定された{@link UniCharSequence}を使用して、新しい{@link OneCharSequence}を構築します。.
-	 * 
+	 *
 	 * @param uniCharSequence
 	 *            {@link UniCharSequence}
 	 */
@@ -57,7 +57,7 @@ public class OneCharSequence implements Comparable<OneCharSequence> {
 
 	/**
 	 * 指定された{@link OneChar}の配列を使用して、新しい{@link OneCharSequence}を構築します。.
-	 * 
+	 *
 	 * @param oneChars
 	 *            {@link OneChar}の配列
 	 */
@@ -71,7 +71,7 @@ public class OneCharSequence implements Comparable<OneCharSequence> {
 	/**
 	 * この{@link OneCharSequence}の長さを返します。長さは{@link OneCharSequence}内の
 	 * {@link BreakIterator#getCharacterInstance(Locale)}の文字境界の数に等しくなります。.
-	 * 
+	 *
 	 * @return このオブジェクトによって表される{@link OneCharSequence}の長さ。
 	 */
 	public int length() {
@@ -83,7 +83,7 @@ public class OneCharSequence implements Comparable<OneCharSequence> {
 	 * 指定されたインデックスの{@link OneChar}値を返します。インデックスの範囲は0からlength() -
 	 * 1までです。配列のインデックス付けの場合と同じように、シーケンスの最初の{@link OneChar}のインデックスは0、次の
 	 * {@link OneChar}のインデックスは1と続きます。.
-	 * 
+	 *
 	 * @param index
 	 *            {@link OneChar}値のインデックス。
 	 * @return {@link OneCharSequence}内の指定されたインデックス位置にある{@link OneChar}値。最初の
@@ -101,7 +101,7 @@ public class OneCharSequence implements Comparable<OneCharSequence> {
 
 	/**
 	 * このシーケンスのサブシーケンスである{@link OneCharSequence}を返します。.
-	 * 
+	 *
 	 * @param beginIndex
 	 *            開始インデックス(この値を含む)。
 	 * @return 指定されたサブシーケンス。
@@ -113,7 +113,7 @@ public class OneCharSequence implements Comparable<OneCharSequence> {
 
 	/**
 	 * このシーケンスのサブシーケンスである{@link OneCharSequence}を返します。.
-	 * 
+	 *
 	 * @param beginIndex
 	 *            開始インデックス(この値を含む)。
 	 * @param endIndex
@@ -144,7 +144,7 @@ public class OneCharSequence implements Comparable<OneCharSequence> {
 	/**
 	 * この{@link OneCharSequence}内で、指定された部分{@link OneCharSequence}
 	 * が最初に出現する位置のインデックスを返します。.
-	 * 
+	 *
 	 * @param oneCharSequence
 	 *            検索対象の部分{@link OneCharSequence}。
 	 * @return 指定された部分{@link OneCharSequence} が最初に出現する位置のインデックス。そのような出現箇所がない場合は-1。
@@ -156,7 +156,7 @@ public class OneCharSequence implements Comparable<OneCharSequence> {
 
 	/**
 	 * 指定されたインデックス以降で、指定された部分{@link OneCharSequence} がこの文字列内で最初に出現する位置のインデックスを返します。.
-	 * 
+	 *
 	 * @param oneCharSequence
 	 *            検索対象の部分{@link OneCharSequence}。
 	 * @param fromIndex
@@ -199,7 +199,7 @@ public class OneCharSequence implements Comparable<OneCharSequence> {
 	/**
 	 * この{@link OneCharSequence}内で、指定された部分{@link OneCharSequence}
 	 * が最後に出現する位置のインデックスを返します。.
-	 * 
+	 *
 	 * @param oneCharSequence
 	 *            検索対象の部分{@link OneCharSequence}。
 	 * @return 指定された部分{@link OneCharSequence} が最後に出現する位置のインデックス。そのような出現箇所がない場合は-1。
@@ -212,7 +212,7 @@ public class OneCharSequence implements Comparable<OneCharSequence> {
 	/**
 	 * この{@link OneCharSequence}内で、指定された部分{@link OneCharSequence}
 	 * が最後に出現する位置のインデックスを返します(検索は指定されたインデックスから開始され、先頭方向に行われる)。.
-	 * 
+	 *
 	 * @param oneCharSequence
 	 *            検索対象の部分{@link OneCharSequence}。
 	 * @param fromIndex
@@ -253,7 +253,7 @@ public class OneCharSequence implements Comparable<OneCharSequence> {
 
 	/**
 	 * この文字列を{@link OneChar}リストに変換します。.
-	 * 
+	 *
 	 * @return {@link OneChar}リスト。長さはこの{@link OneCharSequence}の長さと同じで、内容はこの
 	 *         {@link OneCharSequence}によって表される文字シーケンスが格納されている。
 	 */
@@ -264,7 +264,7 @@ public class OneCharSequence implements Comparable<OneCharSequence> {
 
 	/**
 	 * この文字列を異体字選択符号を無視した{@link OneCharSequence}に変換します。.
-	 * 
+	 *
 	 * @return {@link OneCharSequence}
 	 */
 	public OneCharSequence toOneCharSequenceIgnoreVariation() {
@@ -278,7 +278,7 @@ public class OneCharSequence implements Comparable<OneCharSequence> {
 	 * と指定されたオブジェクトを異体字選択符号を無視して比較します。引数がnullではなく、このオブジェクトと同じ
 	 * {@link OneCharSequence}を表す{@link OneCharSequence}
 	 * オブジェクトである場合にだけ、結果はtrueになります。.
-	 * 
+	 *
 	 * @param anotherObject
 	 *            この{@link OneCharSequence}と比較するオブジェクト
 	 * @return 指定されたオブジェクトがこの{@link OneCharSequence}に等しい{@link OneCharSequence}
@@ -306,7 +306,7 @@ public class OneCharSequence implements Comparable<OneCharSequence> {
 
 	/**
 	 * この文字列を{@link UniCharSequence}に変換します。.
-	 * 
+	 *
 	 * @return {@link UniCharSequence}
 	 */
 	public UniCharSequence toUniCharSequence() {
@@ -326,21 +326,21 @@ public class OneCharSequence implements Comparable<OneCharSequence> {
 	 * 1つ以上のインデックス位置にある(異体字選択符号を除いた)文字が異なる場合は、このうちのもっとも小さいインデックスをkとすると、
 	 * 「より小さい」値と判定される、位置kにある文字を持つ文字列が、もう一方の文字列より辞書的に前になります。
 	 * この場合、compareToは2つの文字列で位置kにある2つの(異体字選択符号を除いた)文字の値の差を返します。 これは次の式で表される値になります。
-	 * 
+	 *
 	 * this.charAt(k).equalsIgnoreVariation().compareTo(anotherOneChar.
 	 * equalsIgnoreVariation())<br>
-	 * 
+	 *
 	 * 有効なすべてのインデックス位置における(異体字選択符号を除いた)文字が同じ場合は、短い方の文字列が辞書的に前になります。
 	 * この場合は、compareToは文字列の長さの差を返します。これは次の式で表される値になります。
-	 * 
+	 *
 	 * this.length()-anotherOneCharSequence.length()<br>
-	 * 
+	 *
 	 * 有効なすべてのインデックス位置における(異体字選択符号を除いた)文字が同じで長さも同じ場合は、
 	 * compareToは2つの文字列で位置kにある2つの文字の値の差を返します。
 	 * この場合、compareToは2つの文字列で位置kにある2つの文字の値の差を返します。これは次の式で表される値になります。
-	 * 
+	 *
 	 * this.charAt(k).compareTo(anotherOneChar)<br>
-	 * 
+	 *
 	 * @param anotherOneCharSequence
 	 *            - 比較対象の{@link OneCharSequence}。
 	 * @return 引数文字列がこの文字列に等しい場合は、値0。<br>
@@ -389,7 +389,7 @@ public class OneCharSequence implements Comparable<OneCharSequence> {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
@@ -400,7 +400,7 @@ public class OneCharSequence implements Comparable<OneCharSequence> {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
@@ -426,13 +426,21 @@ public class OneCharSequence implements Comparable<OneCharSequence> {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
 
 		return this.uniCharSequence.toString();
+	}
+
+	/**
+	 * @return
+	 */
+	public String printStructure() {
+
+		return this.getInformation().toString();
 	}
 
 	Information getInformation() {

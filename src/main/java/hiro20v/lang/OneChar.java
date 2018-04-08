@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
  * {@link OneChar}オブジェクトは不変です。<br>
  * このクラスは、{@link BreakIterator#getCharacterInstance(Locale)}
  * に依存しているため、Javaのバージョンにより、結果が異なる事があります。
- * 
+ *
  * @author hiro
  *
  */
@@ -26,7 +26,7 @@ public class OneChar implements Comparable<OneChar> {
 
 	/**
 	 * 指定された{@link UniChar}の配列を使用して、新しい{@link OneChar}を構築します。.
-	 * 
+	 *
 	 * @param uniChars
 	 *            {@link UniChar}の配列
 	 */
@@ -51,7 +51,7 @@ public class OneChar implements Comparable<OneChar> {
 
 	/**
 	 * この{@link OneChar}を{@link UniChar}リストに変換します。.
-	 * 
+	 *
 	 * @return {@link UniChar}
 	 */
 	public List<UniChar> toUniCharList() {
@@ -61,7 +61,7 @@ public class OneChar implements Comparable<OneChar> {
 
 	/**
 	 * この{@link OneChar}を異体字選択符号を無視した{@link OneChar}に変換します。.
-	 * 
+	 *
 	 * @return {@link OneChar}
 	 */
 	public OneChar toOneCharIgnoreVariation() {
@@ -80,7 +80,7 @@ public class OneChar implements Comparable<OneChar> {
 	 * この{@link OneChar}と指定されたオブジェクトを異体字選択符号を無視して比較します。.<br>
 	 * 引数がnullではなく、このオブジェクトと同じ {@link OneChar}を表す{@link OneChar}
 	 * オブジェクトである場合にだけ、結果はtrueになります。
-	 * 
+	 *
 	 * @param anotherObject
 	 *            この{@link OneChar}と比較するオブジェクト
 	 * @return 指定されたオブジェクトがこの{@link OneChar}に等しい{@link OneChar}
@@ -107,7 +107,7 @@ public class OneChar implements Comparable<OneChar> {
 
 	/**
 	 * 2つの{@link OneChar}オブジェクトを数値的に比較します。.<br>
-	 * 
+	 *
 	 * @param anotherOneChar
 	 *            比較対象の{@link OneChar}
 	 * @return 引数{@link OneChar}がこの{@link OneChar}と等しい場合は値0、この{@link OneChar}が
@@ -141,7 +141,7 @@ public class OneChar implements Comparable<OneChar> {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
@@ -152,7 +152,7 @@ public class OneChar implements Comparable<OneChar> {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
@@ -178,13 +178,21 @@ public class OneChar implements Comparable<OneChar> {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
 
 		return this.oneCharString;
+	}
+
+	/**
+	 * @return
+	 */
+	public String printStructure() {
+
+		return this.getInformation().toString();
 	}
 
 	Information getInformation() {

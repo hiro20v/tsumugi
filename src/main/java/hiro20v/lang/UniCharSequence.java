@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  * 単一文字列.<br>
  * {@link UniChar}の並びを表現します。<br>
  * {@link UniCharSequence}オブジェクトは不変です。
- * 
+ *
  * @author hiro
  *
  */
@@ -21,7 +21,7 @@ public class UniCharSequence implements Comparable<UniCharSequence> {
 
 	/**
 	 * 指定された{@link java.lang.String}を使用して、新しい{@link UniCharSequence}を構築します。.
-	 * 
+	 *
 	 * @param string
 	 *            {@link java.lang.String}
 	 */
@@ -40,7 +40,7 @@ public class UniCharSequence implements Comparable<UniCharSequence> {
 
 	/**
 	 * 指定された{@link UniChar}の配列を使用して、新しい{@link UniCharSequence}を構築します。.
-	 * 
+	 *
 	 * @param uniChars
 	 *            {@link UniChar}の配列
 	 */
@@ -53,7 +53,7 @@ public class UniCharSequence implements Comparable<UniCharSequence> {
 	/**
 	 * この{@link UniCharSequence}の長さを返します。長さは{@link UniCharSequence}
 	 * 内のUnicodeコード単位の数に等しくなります。.
-	 * 
+	 *
 	 * @return このオブジェクトによって表される{@link UniCharSequence}の長さ。
 	 */
 	public int length() {
@@ -65,7 +65,7 @@ public class UniCharSequence implements Comparable<UniCharSequence> {
 	 * 指定されたインデックスの{@link UniChar}値を返します。インデックスの範囲は0からlength() -
 	 * 1までです。配列のインデックス付けの場合と同じように、シーケンスの最初の{@link UniChar}のインデックスは0、次の
 	 * {@link UniChar}のインデックスは1と続きます。.
-	 * 
+	 *
 	 * @param index
 	 *            {@link UniChar}値のインデックス。
 	 * @return 文字列内の指定されたインデックス位置にある{@link UniChar}値。最初の{@link UniChar}
@@ -83,7 +83,7 @@ public class UniCharSequence implements Comparable<UniCharSequence> {
 
 	/**
 	 * このシーケンスのサブシーケンスである{@link UniCharSequence}を返します。.
-	 * 
+	 *
 	 * @param beginIndex
 	 *            開始インデックス(この値を含む)。
 	 * @return 指定されたサブシーケンス。
@@ -95,7 +95,7 @@ public class UniCharSequence implements Comparable<UniCharSequence> {
 
 	/**
 	 * このシーケンスのサブシーケンスである{@link UniCharSequence}を返します。.
-	 * 
+	 *
 	 * @param beginIndex
 	 *            開始インデックス(この値を含む)。
 	 * @param endIndex
@@ -126,7 +126,7 @@ public class UniCharSequence implements Comparable<UniCharSequence> {
 	/**
 	 * この{@link UniCharSequence}内で、指定された部分{@link UniCharSequence}
 	 * が最初に出現する位置のインデックスを返します。.
-	 * 
+	 *
 	 * @param uniCharSequence
 	 *            検索対象の部分{@link UniCharSequence}。
 	 * @return 指定された部分{@link UniCharSequence} が最初に出現する位置のインデックス。そのような出現箇所がない場合は-1。
@@ -139,7 +139,7 @@ public class UniCharSequence implements Comparable<UniCharSequence> {
 	/**
 	 * 指定されたインデックス以降で、指定された部分{@link UniCharSequence}がこの{@link UniCharSequence}
 	 * で最初に出現する位置のインデックスを返します。.
-	 * 
+	 *
 	 * @param uniCharSequence
 	 *            検索対象の部分{@link UniCharSequence}。
 	 * @param fromIndex
@@ -181,7 +181,7 @@ public class UniCharSequence implements Comparable<UniCharSequence> {
 
 	/**
 	 * この文字列内で、指定された部分{@link UniCharSequence}が最後に出現する位置のインデックスを返します。.
-	 * 
+	 *
 	 * @param uniCharSequence
 	 *            検索対象の部分{@link UniCharSequence}。
 	 * @return 指定された部分{@link UniCharSequence} が最後に出現する位置のインデックス。そのような出現箇所がない場合は-1。
@@ -194,7 +194,7 @@ public class UniCharSequence implements Comparable<UniCharSequence> {
 	/**
 	 * この文字列内で、指定された部分{@link UniCharSequence}
 	 * が最後に出現する位置のインデックスを返します(検索は指定されたインデックスから開始され、先頭方向に行われる)。.
-	 * 
+	 *
 	 * @param uniCharSequence
 	 *            検索対象の部分{@link UniCharSequence}。
 	 * @param fromIndex
@@ -235,7 +235,7 @@ public class UniCharSequence implements Comparable<UniCharSequence> {
 
 	/**
 	 * この文字列を{@link UniChar}リストに変換します。.
-	 * 
+	 *
 	 * @return {@link UniChar}リスト。長さはこの{@link UniCharSequence}の長さと同じで、内容はこの
 	 *         {@link UniCharSequence}によって表される文字シーケンスが格納されている。
 	 */
@@ -256,13 +256,13 @@ public class UniCharSequence implements Comparable<UniCharSequence> {
 	 * 1つ以上のインデックス位置にある文字が異なる場合は、このうちのもっとも小さいインデックスをkとすると、&lt;演算子を使用して「より小さい」
 	 * 値と判定される、位置kにある文字を持つ文字列が、もう一方の文字列より辞書的に前になります。
 	 * この場合、compareToは2つの文字列で位置kにある2つの文字の値の差を返します。 これは次の式で表される値になります。
-	 * 
+	 *
 	 * this.charAt(k).compareTo(anotherUniChar)<br>
-	 * 
+	 *
 	 * 有効なすべてのインデックス位置における文字が同じ場合は、短い方の文字列が辞書的に前になります。
 	 * この場合は、compareToは文字列の長さの差を返します。これは次の式で表される値になります。
 	 * this.length()-anotherUniCharSequence.length()<br>
-	 * 
+	 *
 	 * @param anotherUniCharSequence
 	 *            - 比較対象の{@link UniCharSequence}。
 	 * @return 引数文字列がこの文字列に等しい場合は、値0。<br>
@@ -294,7 +294,7 @@ public class UniCharSequence implements Comparable<UniCharSequence> {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
@@ -305,7 +305,7 @@ public class UniCharSequence implements Comparable<UniCharSequence> {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
@@ -331,13 +331,21 @@ public class UniCharSequence implements Comparable<UniCharSequence> {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
 
 		return this.uniCharSequenceString;
+	}
+
+	/**
+	 * @return
+	 */
+	public String printStructure() {
+
+		return this.getInformation().toString();
 	}
 
 	Information getInformation() {
